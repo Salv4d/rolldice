@@ -9,18 +9,18 @@ class RollDice extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { dieOneFace: "one", dieTwoFace: "one" };
+    this.state = { dieOneFace: "one", dieTwoFace: "one", animateDie: "" };
     this.roll = this.roll.bind(this);
   }
 
   render() {
-    let { dieOneFace, dieTwoFace } = this.state;
+    let { dieOneFace, dieTwoFace, animateDie } = this.state;
 
     return (
       <div className="RollDice">
         <div className="RollDice-Dice">
-          <Die dieFace={dieOneFace} />
-          <Die dieFace={dieTwoFace} />
+          <Die dieFace={dieOneFace} animation={animateDie} />
+          <Die dieFace={dieTwoFace} animation={animateDie} />
         </div>
         <button className="RollDice-btn" onClick={this.roll}>
           Roll Dice!
@@ -36,7 +36,12 @@ class RollDice extends Component {
   }
 
   roll() {
-    this.setState({ dieOneFace: this.pickFace(), dieTwoFace: this.pickFace() });
+    this.setState({
+      dieOneFace: this.pickFace(),
+      dieTwoFace: this.pickFace(),
+      animateDie: "rotate-animation",
+    });
+    setTimeout(() => this.setState({ animateDie: "" }), 300);
   }
 }
 

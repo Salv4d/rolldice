@@ -7,10 +7,10 @@ class Die extends Component {
   };
 
   render() {
-    let { dieFace } = this.props;
+    let { dieFace, animation } = this.props;
 
     return (
-      <div className="Die">
+      <div className={`Die ${animation}`}>
         <i className={`fas fa-dice-${dieFace}`}></i>
       </div>
     );
