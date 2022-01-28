@@ -3,3 +3,19 @@
   width: 600px;
   justify-content: space-around;
 }
+
+.RollDice-btn {
+  border: 1px solid #305fb6;
+  border-radius: 5px;
+  background-color: #30adb6;
+  padding: 10px 25px;
+  font-size: 15pt;
+  margin: 15px;
+  transition: 300ms;
+}
+
+.RollDice-btn:hover {
+  background-color: #3085b6;
+  font-size: 16pt;
+  transition: 300ms;
+}

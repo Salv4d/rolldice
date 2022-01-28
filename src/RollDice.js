@@ -18,7 +18,9 @@ class RollDice extends Component {
           <Die dieFace={dieOneFace} />
           <Die dieFace={dieTwoFace} />
         </div>
-        <button onClick={this.roll}>Roll</button>
+        <button className="RollDice-btn" onClick={this.roll}>
+          Roll Dice!
+        </button>
       </div>
     );
   }
