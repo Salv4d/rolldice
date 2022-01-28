@@ -1,9 +1,10 @@
 import "./App.css";
+import Die from "./Die";
 
 function App() {
   return (
     <div className="App">
-      <i class="fas fa-dice-one"></i>
+      <Die />
     </div>
   );
 }
