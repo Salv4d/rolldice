@@ -25,8 +25,8 @@ class RollDice extends Component {
     return (
       <div className="RollDice">
         <div className="RollDice-Dice">
-          <Die dieFace={dieOneFace} animation={animateDie} />
-          <Die dieFace={dieTwoFace} animation={animateDie} />
+          <Die face={dieOneFace} animation={animateDie} />
+          <Die face={dieTwoFace} animation={animateDie} />
         </div>
         <button
           className="RollDice-btn"

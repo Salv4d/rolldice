@@ -3,15 +3,15 @@ import "./Die.css";
 
 class Die extends Component {
   static defaultProps = {
-    dieFace: "one",
+    face: "one",
   };
 
   render() {
-    let { dieFace, animation } = this.props;
+    let { face, animation } = this.props;
 
     return (
       <div className={`Die ${animation}`}>
-        <i className={`fas fa-dice-${dieFace}`}></i>
+        <i className={`fas fa-dice-${face}`}></i>
       </div>
     );
   }
