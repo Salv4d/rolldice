@@ -3,6 +3,10 @@ import Die from "./Die";
 import "./RollDice.css";
 
 class RollDice extends Component {
+  static defaultProps = {
+    dieFaces: ["one", "two", "three", "four", "five", "six"],
+  };
+
   constructor(props) {
     super(props);
     this.state = { dieOneFace: "one", dieTwoFace: "one" };
@@ -27,7 +31,7 @@ class RollDice extends Component {
 
   pickFace() {
     let rand = Math.floor(Math.random() * 6);
-    let dieFaces = ["one", "two", "three", "four", "five", "six"];
+    let { dieFaces } = this.props;
     return dieFaces[rand];
   }
 
